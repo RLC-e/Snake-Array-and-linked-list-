@@ -172,7 +172,7 @@ void initsnake(void)
 
 **动态分配**一个 `struct Snake` 节点，`snake` 指针指向它，然后将光标移到中间打印蛇
 
-![屏幕截图 2026-09-03 161124](C:\Users\RLC-e\Pictures\Screenshots\屏幕截图 2026-09-03 161124.png)
+<img width="94" height="53" alt="屏幕截图 2026-09-03 161124" src="https://github.com/user-attachments/assets/5afa820c-8865-4662-84a2-dc12e3962dc5" />
 
 再用**随机数**生成食物，这边我用了一个**循环**防止食物是否生成在蛇上，在此之前需要用`srand((unsigned)time(NULL))`**生成随机时间种子**
 
@@ -194,8 +194,7 @@ void initfood(void)
     printf("#");
 }
 ```
-
-![屏幕截图 2026-09-03 161053](C:\Users\RLC-e\Pictures\Screenshots\屏幕截图 2026-09-03 161053.png)
+<img width="107" height="65" alt="屏幕截图 2026-09-03 161053" src="https://github.com/user-attachments/assets/64ab5730-1e8a-44cb-8ed8-1570cd5d83ee" />
 
 最后只生成下面和右边的墙
 
@@ -224,7 +223,8 @@ void initwall(void)
 }
 ```
 
-![屏幕截图 2026-09-03 161247](C:\Users\RLC-e\Pictures\Screenshots\屏幕截图 2026-09-03 161247.png)
+<img width="368" height="250" alt="屏幕截图 2026-09-03 161247" src="https://github.com/user-attachments/assets/73c9174b-7dbd-4975-9c90-fca740165743" />
+
 
 ---
 
@@ -472,7 +472,8 @@ void gameover(void)
 }
 ```
 
-![屏幕截图 2026-09-03 170002](C:\Users\RLC-e\Pictures\Screenshots\屏幕截图 2026-09-03 170002.png)
+<img width="647" height="104" alt="屏幕截图 2026-09-03 170002" src="https://github.com/user-attachments/assets/b69208c6-f46b-418e-bc09-16641f1c907c" />
+
 
 ---
 
@@ -484,7 +485,8 @@ void gameover(void)
 
 当时已经能移动了，但是很奇怪，初始化后的移动会出现**两个头**，当时没给我笑死
 
-![屏幕截图 2026-09-04 121830](C:\Users\RLC-e\Pictures\Screenshots\屏幕截图 2026-09-04 121830.png)
+<img width="64" height="43" alt="屏幕截图 2026-09-04 121830" src="https://github.com/user-attachments/assets/7cf7fe3b-ba70-4706-8161-22d56d37f1f1" />
+
 
 看了半天的移动逻辑感觉写的天衣无缝，整了半天去问ds说`kbhit`是函数，形式参数是void要加（），没给我气死，算是自己瞎了
 
@@ -494,13 +496,15 @@ void gameover(void)
 
 当时在写吃食物的逻辑，我在**吃食物的函数**里面调用**移动函数**，导致逻辑极其错乱，从而导致吃食物边吃边拉，可以拉一地，笑死我了
 
-![屏幕截图 2026-09-04 124649](C:\Users\RLC-e\Pictures\Screenshots\屏幕截图 2026-09-04 124649.png)
+<img width="359" height="236" alt="屏幕截图 2026-09-04 124649" src="https://github.com/user-attachments/assets/e8285229-0e38-4e85-9983-f104490512f6" />
+
 
 #### 3.吃食物不能增加长度
 
 重写吃食物的逻辑，我是先**移动头**再**移动身子**，逻辑就是让后面的蛇身跟着前一节蛇身走，但是问题就是我蛇头先走的，导致所有的蛇身都在蛇头的位置，萎缩成一团很好笑（如图所示），而且当时我传数据用的不是**指针**，导致生成的蛇身在左上角（下面没有配图）
 
-![屏幕截图 2026-09-04 122725](C:\Users\RLC-e\Pictures\Screenshots\屏幕截图 2026-09-04 122725.png)
+<img width="42" height="25" alt="屏幕截图 2026-09-04 122725" src="https://github.com/user-attachments/assets/cdbdb289-a25d-411c-b58a-b8b1a8fa3c89" />
+
 
 ---
 
